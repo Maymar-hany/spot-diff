@@ -4,8 +4,15 @@ var b = 3;
 var count =1;
 b--;
 var hinted = 0;
+var score = 0;
+var Minutes=0;
 var correct = [];
 var correctAll=[1,2,3]
+if (count=1){
+    Minutes = 30 * 1,
+    display = document.querySelector('#time');
+startTimer(Minutes, display)
+}
 function nextLevel(){
     a=1;
     hinted =0;
@@ -39,14 +46,14 @@ function nextLevel(){
    </div>`
    block.classList.add('block0'+count+'4')
        board.appendChild(block)
-       var Minutes = 40 * 1,
+        Minutes = 40 * 1,
        display = document.querySelector('#time');
     startTimer(Minutes, display);
-    score.innerHTML="/4"
+    score002.innerHTML="/4"
    }
    if(count===10){
     correctAll=[1,2,3,4,5,6]
-    score.innerHTML="/6"
+    score002.innerHTML="/6"
     var block = document.createElement('div')
     block.innerHTML=`<div id="disappear0${count}5">
     <button class="button0${count}5" onclick="correct005()"></button>
@@ -59,7 +66,7 @@ var block2 = document.createElement('div')
 block2.classList.add('block0'+count+'6')
     board.appendChild(block)
     board.appendChild(block2)
-    var Minutes = 60 * 1,
+     Minutes = 60 * 1,
     display = document.querySelector('#time');
  startTimer(Minutes, display);
 }
@@ -75,6 +82,7 @@ function correct001() {
     if(count >=4 && count <10){
         if (a > 4) {
             count++
+            score ++
             message001.innerHTML = "Congratulations. You found all of them.";
             message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
             
@@ -91,6 +99,8 @@ function correct001() {
     else{
         if (a > 3) {
             count++
+            score ++
+            scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
             message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
             
@@ -106,6 +116,8 @@ function correct002() {
     if(count >=4 && count <10){
         if (a > 4) {
             count++
+            score ++
+            scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
             message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
             
@@ -122,6 +134,8 @@ function correct002() {
     else{
         if (a > 3) {
             count++
+            score ++
+            scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
             message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
             
@@ -137,6 +151,8 @@ function correct003() {
     if(count >=4 && count <10){
         if (a > 4) {
             count++
+            score ++
+            scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
             message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
             
@@ -153,6 +169,8 @@ function correct003() {
     else{
         if (a > 3) {
             count++
+            score ++
+            scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
             message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
             
@@ -166,6 +184,8 @@ function correct004() {
     score001.innerHTML = a++;
     if (a > 4) {
         count++
+        score ++
+        scorediv.innerHTML=score
         message001.innerHTML = "Congratulations. You found all of them.";
         message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
         console.log(a);
@@ -180,6 +200,8 @@ function correct005() {
     score001.innerHTML = a++;
     if (a > 4) {
         count++
+        score ++
+        scorediv.innerHTML=score
         message001.innerHTML = "Congratulations. You found all of them.";
         message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
         console.log(a);
@@ -194,9 +216,11 @@ function correct006() {
     score001.innerHTML = a++;
     if (a > 4) {
         count++
+        score ++
+        scorediv.innerHTML=score
         message001.innerHTML = "Congratulations. You found all of them.";
         message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
-        console.log(a);
+        
     }else if(a>6){
         message001.innerHTML = "Congratulations. You won.";
     }
@@ -241,15 +265,21 @@ function startTimer(duration, display) {
         if (--timer < 0) {
             timer = duration;
         }
+        if(timer<=0){
+            
+        }
+        if(seconds == 00 && count <10){
+            count++
+            nextLevel(count)
+         
+        }
     }
+    
     setInterval(time, 1000);
-    clearInterval(time ,timer)
+        
+    
 }
-var Minutes = 30 * 1,
-    display = document.querySelector('#time');
-window.setInterval(startTimer(Minutes, display),Minutes)
+
     
 
-   winner.classList.add('is-active')
 
-     
