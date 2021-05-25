@@ -3,8 +3,14 @@ a++
 var b = 3;
 var count =1;
 b--;
+var hinted = 0;
+var correct = [];
+var correctAll=[1,2,3]
 function nextLevel(){
     a=1;
+    hinted =0;
+    correct = [];
+    hintbtn.style.display="block"
     level.innerHTML=count
    var board= document.getElementById('board001')
   board.innerHTML=`  <button class="hide001" onclick="incorrect001()">
@@ -26,6 +32,7 @@ function nextLevel(){
       <button class="button0${count}3" onclick="correct003()"></button>
   </div>` 
    if(count>3){
+       correctAll=[1,2,3,4]
        var block = document.createElement('div')
        block.innerHTML=`<div id="disappear0${count}4">
        <button class="button0${count}4" onclick="correct004()"></button>
@@ -38,6 +45,7 @@ function nextLevel(){
     score.innerHTML="/4"
    }
    if(count===10){
+    correctAll=[1,2,3,4,5,6]
     score.innerHTML="/6"
     var block = document.createElement('div')
     block.innerHTML=`<div id="disappear0${count}5">
@@ -60,6 +68,7 @@ block2.classList.add('block0'+count+'6')
    score001.innerHTML=0
 }
 function correct001() {
+    correct.push(1)
    d=document.getElementById('disappear0'+count+'1')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
@@ -90,6 +99,7 @@ function correct001() {
 }
 
 function correct002() {
+    correct.push(2)
     d=document.getElementById('disappear0'+count+'2')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
@@ -120,6 +130,7 @@ function correct002() {
 }
 
 function correct003() {
+    correct.push(3)
     d=document.getElementById('disappear0'+count+'3')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
@@ -195,7 +206,23 @@ function incorrect001() {
    
    
 }
- 
+function hint() {
+   
+    if (correct.length ===0){
+        const num = correctAll[Math.floor(Math.random() * correctAll.length)];
+        window['correct00' + num]();
+        
+    }else{
+        var difference = correctAll.filter(x => correct.indexOf(x) === -1);
+        const rand = difference[Math.floor(Math.random() * difference.length)];
+        window['correct00' + rand]();
+    }
+    hinted++
+    if (hinted === 1){
+        
+        hintbtn.style.display="none"
+    }
+}
 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;

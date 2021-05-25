@@ -597,3 +597,19 @@ html {
     cursor: pointer;
     width: 178px;
 }
+#hintbtn {
+    background-color: #f3a90b;
+    border: none;
+    color: white;
+    padding: 7px 17px;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    float: right;
+    
+    border-radius: 9px;
+    cursor: pointer;
+    width: 100px;
+}
