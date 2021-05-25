@@ -1,0 +1,599 @@
+.header-img {
+    width: 200px;
+    height: 107px;
+    margin: 0px auto;
+    background: url('images/Bladders-01.png');
+    background-size: cover;
+  }
+  #footer {
+    
+    padding: 10px 10px 0px 10px;
+    margin-left: 10px;
+    bottom: 0;
+    width: 100%; 
+    height: 65px;
+    background: url('images/Janssen Logo-01.png');
+    background-repeat: no-repeat;
+}
+html {
+    background-image: url('images/Game Background.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    -webkit-background-size: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-height: 100%;
+     overflow: hidden;
+     position: relative;
+     
+  }
+  body {
+    max-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+   
+}
+/* Parent Container */
+.content_img{
+    position: relative;
+    
+   }
+   
+   /* Child Text Container */
+   .content_img div{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #5d0668;
+    color: white;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    font-size: 15px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+   }
+   
+   /* Hover on Parent Container */
+   .content_img:hover{
+    cursor: pointer;
+   }
+   
+   .content_img:hover div{
+    visibility: visible;
+    opacity: 0.7; 
+   }
+.position001 {
+    position: relative;
+   
+}
+#board001{
+    margin: 0px auto;
+    width: fit-content;
+}
+.block001 {
+    position: absolute;
+    top: 115px;
+    left: 460px;
+}
+
+.block002 {
+    position: absolute;
+    top: 110px;
+    left: 200px;
+}
+
+.block003 {
+    position: absolute;
+    top: 100px;
+    left: 520px;
+    
+}
+
+.button001 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 20px;
+    height: 10px;
+}
+
+.button002 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 20px;
+    height: 40px;
+}
+
+.button003 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 50px;
+}
+.block021 {
+    position: absolute;
+    top: 175px;
+    left: 570px;
+}
+
+.block022 {
+    position: absolute;
+    top: 250px;
+    left: 480px;
+}
+
+.block023 {
+    position: absolute;
+    top: 120px;
+    left: 620px;
+    
+}
+
+.button021 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 30px;
+    height: 20px;
+}
+
+.button022 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 60px;
+    height: 30px;
+}
+
+.button023 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 50px;
+}
+.block031 {
+    position: absolute;
+    top: 250px;
+    left: 590px;
+}
+
+.block032 {
+    position: absolute;
+    top: 220px;
+    left: 330px;
+}
+
+.block033 {
+    position: absolute;
+    top: 115px;
+    left: 380px;
+    
+}
+
+.button031 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 30px;
+    height: 50px;
+}
+
+.button032 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 30px;
+    height: 20px;
+}
+
+.button033 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 30px;
+}
+.block041 {
+    position: absolute;
+    top: 100px;
+    left: 470px;
+}
+
+.block042 {
+    position: absolute;
+    top: 110px;
+    left: 250px;
+}
+
+.block043 {
+    position: absolute;
+    top: 175px;
+    left: 200px;
+    
+}
+.block044 {
+    position: absolute;
+    top: 10px;
+    left: 320px;
+    
+}
+
+.button041 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 30px;
+    height: 50px;
+}
+
+.button042 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 30px;
+}
+
+.button043 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 30px;
+}
+.button044 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 30px;
+    height: 30px;
+}
+.block051 {
+    position: absolute;
+    top: 50px;
+    left: 400px;
+}
+
+.block052 {
+    position: absolute;
+    top: 100px;
+    left: 250px;
+}
+
+.block053 {
+    position: absolute;
+    top: 155px;
+    left: 280px;
+    
+}
+.block054 {
+    position: absolute;
+    top: 270px;
+    left: 270px;
+    
+}
+
+.button051 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 30px;
+}
+
+.button052 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 60px;
+}
+
+.button053 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 60px;
+    height: 60px;
+}
+.button054 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 40px;
+}
+.block061 {
+    position: absolute;
+    top: 70px;
+    left: 470px;
+}
+
+.block062 {
+    position: absolute;
+    top: 50px;
+    left: 630px;
+}
+
+.block063 {
+    position: absolute;
+    top: 255px;
+    left: 610px;
+    
+}
+.block064 {
+    position: absolute;
+    top: 100px;
+    left: 530px;
+    
+}
+
+.button061 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 30px;
+}
+
+.button062 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 60px;
+}
+
+.button063 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 60px;
+    height: 60px;
+}
+.button064 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 40px;
+}
+.block071 {
+    position: absolute;
+    top: 120px;
+    left: 365px;
+}
+
+.block072 {
+    position: absolute;
+    top: 130px;
+    left: 510px;
+}
+
+.block073 {
+    position: absolute;
+    top: 265px;
+    left: 320px;
+    
+}
+.block074 {
+    position: absolute;
+    top: 130px;
+    left: 165px;
+    
+}
+
+.button071 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 30px;
+}
+
+.button072 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 60px;
+}
+
+.button073 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 60px;
+    height: 60px;
+}
+.button074 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 40px;
+}
+.block081 {
+    position: absolute;
+    top: 190px;
+    left: 385px;
+}
+
+.block082 {
+    position: absolute;
+    top: 230px;
+    left: 460px;
+}
+
+.block083 {
+    position: absolute;
+    top: 250px;
+    left: 580px;
+    
+}
+.block084 {
+    position: absolute;
+    top: 165px;
+    left: 575px;
+    
+}
+
+.button081 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 30px;
+}
+
+.button082 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 60px;
+}
+
+.button083 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 60px;
+    height: 60px;
+}
+.button084 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 40px;
+}
+.block091 {
+    position: absolute;
+    top: 140px;
+    left: 365px;
+}
+
+.block092 {
+    position: absolute;
+    top: 150px;
+    left: 440px;
+}
+
+.block093 {
+    position: absolute;
+    top: 50px;
+    left: 500px;
+    
+}
+.block094 {
+    position: absolute;
+    top: 180px;
+    left: 175px;
+    
+}
+
+.button091 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 30px;
+}
+
+.button092 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 60px;
+}
+
+.button093 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 60px;
+    height: 60px;
+}
+.button094 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 40px;
+}
+.block0101 {
+    position: absolute;
+    top: 200px;
+    left: 365px;
+}
+
+.block0102 {
+    position: absolute;
+    top: 150px;
+    left: 520px;
+}
+
+.block0103 {
+    position: absolute;
+    top: 230px;
+    left: 590px;
+    
+}
+.block0104 {
+    position: absolute;
+    top: 250px;
+    left: 355px;
+    
+}
+.block0105 {
+    position: absolute;
+    top: 220px;
+    left: 355px;
+    
+}
+.block0106 {
+    position: absolute;
+    top: 200px;
+    left: 355px;
+    
+}
+
+.button0101 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 30px;
+}
+
+.button0102 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 60px;
+}
+
+.button0103 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 60px;
+    height: 60px;
+}
+.button0104 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 40px;
+}
+.button0105 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 40px;
+}
+.button0106 {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 40px;
+    height: 40px;
+}
+.hide001 {
+    background-color: transparent;
+    border: 1px transparent;
+    
+}
+
+#mark001 {
+    color: #f3a90b;
+    font-size: 180%;
+}
+
+.blue001 {
+    background-color: #5d0668;
+    border: none;
+    color: white;
+    padding: 7px 17px;
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 16px;
+    margin-left: 100px;
+    border-radius: 9px;
+    cursor: pointer;
+    width: 178px;
+}

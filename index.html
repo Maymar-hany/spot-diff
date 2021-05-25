@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <title>Find The Differences</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+        <audio id="buzzer" src="mixkit-achievement-bell-600.wav" type="audio/wav"></audio>
+  
+    <title>Find The Differences</title>
+</head>
+<body>
+    <main>
+        <div class="header-img"></div>
+    </main>
+    
+    <h2>Find The Differences</h2>
+    Items: <text id="score001">0</text><text id="score">/3</text>
+    
+    
+    <div class="position001">
+        <div id="board001">
+            <button class="hide001" onclick="incorrect001()">
+                <img src="images/image1.jpg" height="300" />
+                
+            </button>
+            <div class="block001">
+                <div id="disappear011">
+                    <button class="button001" onclick="correct001()"></button>
+                </div>
+            </div>
+            <div class="block002">
+                <div id="disappear012">
+                    <button class="button002" onclick="correct002()"></button>
+                </div>
+            </div>
+            <div class="block003">
+                <div id="disappear013">
+                    <button class="button003" onclick="correct003()"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <p id="message001"></p>
+    <p id="message002"></p>
+    <div> <span id="time">00:00</span> minutes!</div>
+    <div id="footer">
+    </div> 
+</body>
+<script src="script.js"></script>
+</html>
