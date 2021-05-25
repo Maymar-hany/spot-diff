@@ -597,6 +597,7 @@ html {
     cursor: pointer;
     width: 178px;
 }
+
 #hintbtn {
     background-color: #f3a90b;
     border: none;
@@ -612,4 +613,9 @@ html {
     border-radius: 9px;
     cursor: pointer;
     width: 100px;
+}
+.text{
+    color: #1285ca;
+    font-weight: bold;
+    font-size: 20px;
 }

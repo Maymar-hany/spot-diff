@@ -223,7 +223,13 @@ function hint() {
         hintbtn.style.display="none"
     }
 }
-
+function getname(){
+    var x = 
+                document.getElementById("name").value;
+            
+           player.innerHTML = x;
+           winner.classList.remove('is-active')
+}
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     function time () {
@@ -243,4 +249,7 @@ var Minutes = 30 * 1,
     display = document.querySelector('#time');
 window.setInterval(startTimer(Minutes, display),Minutes)
     
+
+   winner.classList.add('is-active')
+
      
