@@ -8,6 +8,10 @@ var score = 0;
 var Minutes=0;
 var correct = [];
 var correctAll=[1,2,3]
+var scoreboard={
+    name:'',
+    finalscore:''
+}
 if (count=1){
     Minutes = 30 * 1,
     display = document.querySelector('#time');
@@ -223,6 +227,7 @@ function correct006() {
         
     }else if(a>6){
         message001.innerHTML = "Congratulations. You won.";
+        scoreboard.finalscore=score
     }
    
 }
@@ -299,9 +304,11 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }}
   function getname(){
-    var x = 
-                document.getElementById("name").value;
+    var x = document.getElementById("name").value;
+            scoreboard.name=x
             
+            console.log( localStorage.getItem("PlayerName"));
            player.innerHTML = x;
            modal.style.display = "none";
 }
+localStorage.setItem("PlayerNames",scoreboard.name );

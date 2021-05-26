@@ -6,7 +6,7 @@
     background-size: cover;
   }
   #footer {
-    
+    position: fixed;
     padding: 10px 10px 0px 10px;
     margin-left: 10px;
     bottom: 0;
@@ -592,12 +592,15 @@ html {
     text-decoration: none;
     
     font-size: 16px;
-    margin-left: 100px;
+    
     border-radius: 9px;
     cursor: pointer;
     width: 178px;
 }
-
+#message002,#message001{
+    margin: 0px auto;
+    width: fit-content; 
+}
 #hintbtn {
     background-color: #f3a90b;
     border: none;
@@ -682,3 +685,4 @@ html {
     text-decoration: none;
     cursor: pointer;
   }
+ 
