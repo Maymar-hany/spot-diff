@@ -98,6 +98,7 @@ function correct001() {
         }
     }else if(count ===10) {
         if (a > 6) {
+            clearInterval(start)
             score ++
             scorediv.innerHTML=score
             scoreboard.finalscore=score
@@ -137,6 +138,7 @@ function correct002() {
         }
     }else if(count ===10) {
         if (a > 6) {
+            clearInterval(start)
             score ++
             scorediv.innerHTML=score
             scoreboard.finalscore=score
@@ -175,6 +177,7 @@ function correct003() {
         }
     }else if(count ===10) {
         if (a > 6) {
+            clearInterval(start)
             score ++
             scorediv.innerHTML=score
             scoreboard.finalscore=score
@@ -209,6 +212,7 @@ function correct004() {
         message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
         
     }else if(a>6){
+        clearInterval(start)
         score ++
         scorediv.innerHTML=score 
         scoreboard.finalscore=score
@@ -225,6 +229,7 @@ function correct005() {
     
    
      if(a>6){
+         clearInterval(start)
         score ++
         scorediv.innerHTML=score
         scoreboard.finalscore=score
@@ -240,6 +245,7 @@ function correct006() {
     score001.innerHTML = a++;
     
     if(a>6){
+        clearInterval(start)
         score ++
         scorediv.innerHTML=score
         scoreboard.finalscore=score
@@ -290,6 +296,9 @@ function startTimer(duration, display) {
             count++
             nextLevel(count)
         
+        }else if (seconds == 00 && count == 10){
+            
+            clearInterval(start)
         }
     }
     
@@ -302,6 +311,7 @@ var span = document.getElementsByClassName("close")[0];
 var close = document.getElementsByClassName("closefinal")[0];
 close.onclick=function(){
     finalmodal.style.display="none"
+    clearInterval(start)
 }
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
