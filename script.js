@@ -14,12 +14,7 @@ var scoreboard={
     finalscore:''
 }
 var start=0
-if (count=1){
-    Minutes = 30 * 1,
-    display = document.querySelector('#time');
-    startTimer(Minutes, display)
-    
-}
+
 function nextLevel(){
     clearInterval(start)
     a=1;
@@ -279,12 +274,18 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
+  Minutes = 30 * 1,
+           display = document.querySelector('#time');
+           startTimer(Minutes, display)
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+    Minutes = 30 * 1,
+           display = document.querySelector('#time');
+           startTimer(Minutes, display)
   }}
   function getname(){
     var x = document.getElementById("name").value;
@@ -293,5 +294,8 @@ window.onclick = function(event) {
            
            player.innerHTML = x;
            modal.style.display = "none";
+           Minutes = 30 * 1,
+           display = document.querySelector('#time');
+           startTimer(Minutes, display)
 }
 localStorage.setItem("PlayerNames",scoreboard.name );
