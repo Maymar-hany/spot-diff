@@ -100,14 +100,14 @@ html {
 .button001 {
     background-color: transparent;
     border: 1px solid transparent;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
 
 .button002 {
     background-color: transparent;
     border: 1px solid transparent;
-    width: 20px;
+    width: 40px;
     height: 40px;
 }
 
@@ -126,7 +126,7 @@ html {
 .block022 {
     position: absolute;
     top: 250px;
-    left: 480px;
+    left: 470px;
 }
 
 .block023 {
@@ -139,22 +139,22 @@ html {
 .button021 {
     background-color: transparent;
     border: 1px solid transparent;
-    width: 30px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
 
 .button022 {
     background-color: transparent;
     border: 1px solid transparent;
     width: 60px;
-    height: 30px;
+    height: 60px;
 }
 
 .button023 {
     background-color: transparent;
     border: 1px solid transparent;
-    width: 40px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 .block031 {
     position: absolute;
@@ -178,22 +178,22 @@ html {
 .button031 {
     background-color: transparent;
     border: 1px solid transparent;
-    width: 30px;
+    width: 50px;
     height: 50px;
 }
 
 .button032 {
     background-color: transparent;
     border: 1px solid transparent;
-    width: 30px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
 
 .button033 {
     background-color: transparent;
     border: 1px solid transparent;
     width: 40px;
-    height: 30px;
+    height: 40px;
 }
 .block041 {
     position: absolute;
