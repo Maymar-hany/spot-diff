@@ -2,6 +2,7 @@ var a = 0;
 a++
 var b = 3;
 var count =1;
+
 b--;
 var hinted = 0;
 var score = 0;
@@ -12,12 +13,15 @@ var scoreboard={
     name:'',
     finalscore:''
 }
+var start=0
 if (count=1){
     Minutes = 30 * 1,
     display = document.querySelector('#time');
-startTimer(Minutes, display)
+    startTimer(Minutes, display)
+    
 }
 function nextLevel(){
+    clearInterval(start)
     a=1;
     hinted =0;
     correct = [];
@@ -54,6 +58,10 @@ function nextLevel(){
        display = document.querySelector('#time');
     startTimer(Minutes, display);
     score002.innerHTML="/4"
+   }else if(count>1 && count<4){
+    Minutes = 30 * 1,
+    display = document.querySelector('#time');
+    startTimer(Minutes, display)
    }
    if(count===10){
     correctAll=[1,2,3,4,5,6]
@@ -243,12 +251,13 @@ function hint() {
 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
-    function time () {
+     function time () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
         display.textContent = minutes + ":" + seconds;
+        
         if (--timer < 0) {
             timer = duration;
             
@@ -257,11 +266,12 @@ function startTimer(duration, display) {
         if(seconds == 00 && count <10){
             count++
             nextLevel(count)
-         
+        
         }
     }
     
-    setInterval(time, 1000);
+   start= setInterval(time, 1000);
+    
 }
 var modal = document.getElementById("myModal");
 // Get the <span> element that closes the modal
