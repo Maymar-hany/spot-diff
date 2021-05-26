@@ -40,7 +40,11 @@ html {
     position: relative;
     
    }
-   
+   @media (max-width: 480px){
+    #puzzleImg{
+        width:400px
+    } 
+   }
    /* Child Text Container */
    .content_img div{
     position: absolute;

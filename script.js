@@ -24,7 +24,7 @@ function nextLevel(){
     level.innerHTML=count
    var board= document.getElementById('board001')
   board.innerHTML=`  <button class="hide001" onclick="incorrect001()">
-  <img src="images/image${count}.jpg" height="300" />  
+  <img id="puzzleImg" src="images/image${count}.jpg" height="300" />  
 </button>
 <div class="block0${count}1
 ">
