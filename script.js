@@ -88,7 +88,7 @@ function correct001() {
             count++
             score ++
             message001.innerHTML = "Congratulations. You found all of them.";
-            message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
+            message002.innerHTML = "<button class=blue001 onclick=nextLevel()>Next Level</button>";
             
         }
     }else if(count ===10) {
@@ -106,7 +106,7 @@ function correct001() {
             score ++
             scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
-            message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
+            message002.innerHTML = "<button class=blue001 onclick=nextLevel()>Next Level</button>";
             
         }
     }
@@ -123,15 +123,12 @@ function correct002() {
             score ++
             scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
-            message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
+            message002.innerHTML = "<button class=blue001 onclick=nextLevel()>Next Level</button>";
             
         }
     }else if(count ===10) {
         if (a > 6) {
-            
-            message001.innerHTML = "Congratulations. You won.";
-            
-            
+            message001.innerHTML = "Congratulations. You won."; 
         }
        
     }
@@ -141,7 +138,7 @@ function correct002() {
             score ++
             scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
-            message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
+            message002.innerHTML = "<button class=blue001 onclick=nextLevel()>Next Level</button>";
             
         }
     }
@@ -158,15 +155,13 @@ function correct003() {
             score ++
             scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
-            message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
+            message002.innerHTML = "<button class=blue001 onclick=nextLevel()>Next Level</button>";
             
         }
     }else if(count ===10) {
         if (a > 6) {
             
-            message001.innerHTML = "Congratulations. You won.";
-            
-            
+            message001.innerHTML = "Congratulations. You won.";    
         }
        
     }
@@ -176,7 +171,7 @@ function correct003() {
             score ++
             scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
-            message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
+            message002.innerHTML = "<button class=blue001 onclick=nextLevel()>Next Level</button>";
             
         }
     }
@@ -215,17 +210,10 @@ function correct005() {
    
 }
 function correct006() {
-    d=document.getElementById('disappear0'+count+'4')
+    d=document.getElementById('disappear0'+count+'6')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
-    if (a > 4) {
-        count++
-        score ++
-        scorediv.innerHTML=score
-        message001.innerHTML = "Congratulations. You found all of them.";
-        message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
-        
-    }else if(a>6){
+    if(a>6){
         message001.innerHTML = "Congratulations. You won.";
         scoreboard.finalscore=score
     }
@@ -252,13 +240,7 @@ function hint() {
         hintbtn.style.display="none"
     }
 }
-function getname(){
-    var x = 
-                document.getElementById("name").value;
-            
-           player.innerHTML = x;
-           winner.classList.remove('is-active')
-}
+
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     function time () {
@@ -269,9 +251,9 @@ function startTimer(duration, display) {
         display.textContent = minutes + ":" + seconds;
         if (--timer < 0) {
             timer = duration;
-            console.log('hi');
+            
         }
-        console.log(timer);
+        
         if(seconds == 00 && count <10){
             count++
             nextLevel(count)
@@ -280,19 +262,10 @@ function startTimer(duration, display) {
     }
     
     setInterval(time, 1000);
-        
-    
 }
 var modal = document.getElementById("myModal");
-
-
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-
-
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
@@ -307,7 +280,7 @@ window.onclick = function(event) {
     var x = document.getElementById("name").value;
             scoreboard.name=x
             
-            console.log( localStorage.getItem("PlayerName"));
+           
            player.innerHTML = x;
            modal.style.display = "none";
 }

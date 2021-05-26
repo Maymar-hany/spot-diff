@@ -10,7 +10,7 @@
     padding: 10px 10px 0px 10px;
     margin-left: 10px;
     bottom: 0;
-    width: 100%; 
+    width: 400px; 
     height: 65px;
     background: url('images/Janssen Logo-01.png');
     background-repeat: no-repeat;
@@ -499,8 +499,8 @@ html {
 }
 .block0101 {
     position: absolute;
-    top: 200px;
-    left: 365px;
+    top: 230px;
+    left: 385px;
 }
 
 .block0102 {
@@ -523,8 +523,8 @@ html {
 }
 .block0105 {
     position: absolute;
-    top: 220px;
-    left: 355px;
+    top: 260px;
+    left: 395px;
     
 }
 .block0106 {
