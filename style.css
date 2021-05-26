@@ -500,7 +500,7 @@ html {
 .block0101 {
     position: absolute;
     top: 230px;
-    left: 385px;
+    left: 285px;
 }
 
 .block0102 {
@@ -622,6 +622,9 @@ html {
     font-weight: bold;
     font-size: 20px;
 }
+#finalmodal{
+    display: none;  
+}
 .modal {
     display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -651,7 +654,10 @@ html {
     font-size: 20px;
     justify-content: center;
     align-items: center;
-
+}
+.wintxt{
+    color: #fff;
+    font-size: 15px;
 }
 #name{
     margin:0px auto; 
@@ -672,7 +678,7 @@ html {
 }
   
   /* The Close Button */
-  .close {
+  .close , .closefinal{
     color: #aaa;
     float: right;
     font-size: 28px;

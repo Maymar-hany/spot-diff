@@ -21,7 +21,7 @@
     
     <P class="text">Find The Differences</P>
     <p class="text">
-        Name:<text id="player"></text>
+        Name:<text id="player">Guest</text>
         Level:<text id="level">1</text>
          Items: <text id="score001">0</text><text id="score002">/3</text>
     
@@ -58,14 +58,21 @@
     <p id="message001"></p>
     <div id="message002"></div>
     <div id="myModal" class="modal">
-
-        <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
 
             <p id="wintitle" class=" title"> Enter Your Name:</p>
             <input id="name" type = "text"  value="">
             <button id="winbtn" onClick="getname()">Play</button>
+        </div>
+    </div>
+    <div id="finalmodal" class="modal">
+        <div class="modal-content">
+            <span class="closefinal">&times;</span>
+            <p id="wintitle" class=" title"> Congratulations. You won.</p>
+            <p   class=" wintxt"> Name:<text id="playername" ></text></p>
+            <p  class="wintxt"> Score: <text id="playerscore"></text></p>
+            <button id="winbtn" onClick="window.location.href=window.location.href">Play Again</button>
         </div>
     </div>
     <div id="footer">

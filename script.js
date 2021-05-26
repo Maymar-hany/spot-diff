@@ -86,19 +86,24 @@ function correct001() {
    d=document.getElementById('disappear0'+count+'1')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
+    
     if(count >=4 && count <10){
         if (a > 4) {
             count++
             score ++
+            scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
             message002.innerHTML = "<button class=blue001 onclick=nextLevel()>Next Level</button>";
             
         }
     }else if(count ===10) {
         if (a > 6) {
-            
-            message001.innerHTML = "Congratulations. You won.";
-            
+            score ++
+            scorediv.innerHTML=score
+            scoreboard.finalscore=score
+            playername.innerHTML=scoreboard.name
+            playerscore.innerHTML=scoreboard.finalscore
+            finalmodal.style.display='block'
             
         }
        
@@ -120,6 +125,7 @@ function correct002() {
     d=document.getElementById('disappear0'+count+'2')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
+    
     if(count >=4 && count <10){
         if (a > 4) {
             count++
@@ -131,7 +137,12 @@ function correct002() {
         }
     }else if(count ===10) {
         if (a > 6) {
-            message001.innerHTML = "Congratulations. You won."; 
+            score ++
+            scorediv.innerHTML=score
+            scoreboard.finalscore=score
+            playername.innerHTML=scoreboard.name
+            playerscore.innerHTML=scoreboard.finalscore
+            finalmodal.style.display='block'
         }
        
     }
@@ -152,6 +163,7 @@ function correct003() {
     d=document.getElementById('disappear0'+count+'3')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
+    
     if(count >=4 && count <10){
         if (a > 4) {
             count++
@@ -163,8 +175,12 @@ function correct003() {
         }
     }else if(count ===10) {
         if (a > 6) {
-            
-            message001.innerHTML = "Congratulations. You won.";    
+            score ++
+            scorediv.innerHTML=score
+            scoreboard.finalscore=score
+            playername.innerHTML=scoreboard.name
+            playerscore.innerHTML=scoreboard.finalscore
+            finalmodal.style.display='block'   
         }
        
     }
@@ -184,15 +200,21 @@ function correct004() {
     d=document.getElementById('disappear0'+count+'4')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
-    if (a > 4) {
+    
+    if (a > 4 && count !=10) {
         count++
         score ++
         scorediv.innerHTML=score
         message001.innerHTML = "Congratulations. You found all of them.";
         message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
-        console.log(a);
+        
     }else if(a>6){
-        message001.innerHTML = "Congratulations. You won.";
+        score ++
+        scorediv.innerHTML=score 
+        scoreboard.finalscore=score
+        playername.innerHTML=scoreboard.name
+        playerscore.innerHTML=scoreboard.finalscore
+        finalmodal.style.display='block'
     }
    
 }
@@ -200,15 +222,15 @@ function correct005() {
     d=document.getElementById('disappear0'+count+'5')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
-    if (a > 4) {
-        count++
+    
+   
+     if(a>6){
         score ++
         scorediv.innerHTML=score
-        message001.innerHTML = "Congratulations. You found all of them.";
-        message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
-        console.log(a);
-    }else if(a>6){
-        message001.innerHTML = "Congratulations. You won.";
+        scoreboard.finalscore=score
+        finalmodal.style.display='block'
+        playername.innerHTML=scoreboard.name
+        playerscore.innerHTML=scoreboard.finalscore
     }
    
 }
@@ -216,8 +238,14 @@ function correct006() {
     d=document.getElementById('disappear0'+count+'6')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
+    
     if(a>6){
-        message001.innerHTML = "Congratulations. You won.";
+        score ++
+        scorediv.innerHTML=score
+        scoreboard.finalscore=score
+        finalmodal.style.display='block'
+        playername.innerHTML=scoreboard.name
+            playerscore.innerHTML=scoreboard.finalscore
         scoreboard.finalscore=score
     }
    
@@ -271,6 +299,10 @@ function startTimer(duration, display) {
 var modal = document.getElementById("myModal");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
+var close = document.getElementsByClassName("closefinal")[0];
+close.onclick=function(){
+    finalmodal.style.display="none"
+}
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
@@ -283,6 +315,7 @@ span.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+    finalmodal.style.display="none"
     Minutes = 30 * 1,
            display = document.querySelector('#time');
            startTimer(Minutes, display)
@@ -290,8 +323,6 @@ window.onclick = function(event) {
   function getname(){
     var x = document.getElementById("name").value;
             scoreboard.name=x
-            
-           
            player.innerHTML = x;
            modal.style.display = "none";
            Minutes = 30 * 1,
