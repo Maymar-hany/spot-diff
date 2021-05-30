@@ -37,7 +37,7 @@ html {
 }
 #puzzleImg{
     max-height: 80%;
-    width: fit-content;
+    width: 1000px !important;
     height: 300px !important;
 }
 /* Parent Container */
