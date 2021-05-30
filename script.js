@@ -32,6 +32,7 @@ function nextLevel(){
     correct = [];
     hintbtn.style.display="block"
     level.innerHTML=count
+    ten001.innerHTML="/10"
    var board= document.getElementById('board001')
   board.innerHTML=`  <button class="hide001" onclick="incorrect001()">
   <img id="puzzleImg" src="images/image${count}.jpg" height="300px" />  
