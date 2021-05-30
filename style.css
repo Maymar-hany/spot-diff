@@ -650,7 +650,7 @@ html {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border-radius: 10px;
-    width: 20%; /* Could be more or less, depending on screen size */
+    width: fit-content; /* Could be more or less, depending on screen size */
   }
 
 #wintitle{
@@ -698,4 +698,21 @@ html {
     text-decoration: none;
     cursor: pointer;
   }
- 
+  #time{
+    justify-content: center;
+    align-items: center; 
+    margin: 0 auto;
+    
+    width: fit-content;
+    
+}
+#clock{
+    font-size: 20px;
+}
+.clck{
+    font-size: 20px;
+}
+#player , #level ,#score002{
+    margin-right: 20px;
+    
+}

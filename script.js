@@ -13,10 +13,18 @@ var scoreboard={
     name:'',
     finalscore:''
 }
+var playeName="";
+var time =0;
+var timer= 0;
+            var sec = 0;
+            var minutes =0;
+            var seconds = 0;
 var start=0
+function pad ( val ) { return val > 9 ? val : "0" + val; }
+
 
 function nextLevel(){
-    clearInterval(start)
+    
     a=1;
     hinted =0;
     correct = [];
@@ -51,12 +59,7 @@ function nextLevel(){
        board.appendChild(block)
         Minutes = 40 * 1,
        display = document.querySelector('#time');
-    startTimer(Minutes, display);
-    score002.innerHTML="/4"
-   }else if(count>1 && count<4){
-    Minutes = 30 * 1,
-    display = document.querySelector('#time');
-    startTimer(Minutes, display)
+   
    }
    if(count===10){
     correctAll=[1,2,3,4,5,6]
@@ -73,9 +76,7 @@ var block2 = document.createElement('div')
 block2.classList.add('block0'+count+'6')
     board.appendChild(block)
     board.appendChild(block2)
-     Minutes = 60 * 1,
-    display = document.querySelector('#time');
- startTimer(Minutes, display);
+    
 }
    message001.innerHTML = "";
    message002.innerHTML = "";
@@ -86,25 +87,29 @@ function correct001() {
    d=document.getElementById('disappear0'+count+'1')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
-    
+    getScore()
     if(count >=4 && count <10){
         if (a > 4) {
             count++
             score ++
-            scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
             message002.innerHTML = "<button class=blue001 onclick=nextLevel()>Next Level</button>";
             
         }
     }else if(count ===10) {
         if (a > 6) {
-            clearInterval(start)
+            
             score ++
-            scorediv.innerHTML=score
             scoreboard.finalscore=score
             playername.innerHTML=scoreboard.name
             playerscore.innerHTML=scoreboard.finalscore
             finalmodal.style.display='block'
+            Minutes = minutes.concat(':')
+            time = Minutes.concat(seconds)
+            console.log(time);
+            clearInterval(timer)
+            sendScore()
+            getScore()
             
         }
        
@@ -113,7 +118,6 @@ function correct001() {
         if (a > 3) {
             count++
             score ++
-            scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
             message002.innerHTML = "<button class=blue001 onclick=nextLevel()>Next Level</button>";
             
@@ -131,20 +135,24 @@ function correct002() {
         if (a > 4) {
             count++
             score ++
-            scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
             message002.innerHTML = "<button class=blue001 onclick=nextLevel()>Next Level</button>";
             
         }
     }else if(count ===10) {
         if (a > 6) {
-            clearInterval(start)
+            
             score ++
-            scorediv.innerHTML=score
             scoreboard.finalscore=score
             playername.innerHTML=scoreboard.name
             playerscore.innerHTML=scoreboard.finalscore
             finalmodal.style.display='block'
+            Minutes = minutes.concat(':')
+            time = Minutes.concat(seconds)
+            console.log(time);
+            clearInterval(timer)
+            sendScore()
+            getScore()
         }
        
     }
@@ -152,7 +160,6 @@ function correct002() {
         if (a > 3) {
             count++
             score ++
-            scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
             message002.innerHTML = "<button class=blue001 onclick=nextLevel()>Next Level</button>";
             
@@ -165,25 +172,28 @@ function correct003() {
     d=document.getElementById('disappear0'+count+'3')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
-    
     if(count >=4 && count <10){
         if (a > 4) {
             count++
             score ++
-            scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
             message002.innerHTML = "<button class=blue001 onclick=nextLevel()>Next Level</button>";
             
         }
     }else if(count ===10) {
         if (a > 6) {
-            clearInterval(start)
+            
             score ++
-            scorediv.innerHTML=score
             scoreboard.finalscore=score
             playername.innerHTML=scoreboard.name
             playerscore.innerHTML=scoreboard.finalscore
             finalmodal.style.display='block'   
+            Minutes = minutes.concat(':')
+            time = Minutes.concat(seconds)
+            console.log(time);
+            clearInterval(timer)
+            sendScore()
+            getScore()
         }
        
     }
@@ -191,7 +201,6 @@ function correct003() {
         if (a > 3) {
             count++
             score ++
-            scorediv.innerHTML=score
             message001.innerHTML = "Congratulations. You found all of them.";
             message002.innerHTML = "<button class=blue001 onclick=nextLevel()>Next Level</button>";
             
@@ -207,18 +216,22 @@ function correct004() {
     if (a > 4 && count !=10) {
         count++
         score ++
-        scorediv.innerHTML=score
         message001.innerHTML = "Congratulations. You found all of them.";
         message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
         
     }else if(a>6){
-        clearInterval(start)
+        
         score ++
-        scorediv.innerHTML=score 
         scoreboard.finalscore=score
         playername.innerHTML=scoreboard.name
         playerscore.innerHTML=scoreboard.finalscore
         finalmodal.style.display='block'
+        Minutes = minutes.concat(':')
+        time = Minutes.concat(seconds)
+        console.log(time);
+        clearInterval(timer)
+        sendScore()
+        getScore()
     }
    
 }
@@ -229,13 +242,18 @@ function correct005() {
     
    
      if(a>6){
-         clearInterval(start)
+         
         score ++
-        scorediv.innerHTML=score
         scoreboard.finalscore=score
         finalmodal.style.display='block'
         playername.innerHTML=scoreboard.name
         playerscore.innerHTML=scoreboard.finalscore
+        Minutes = minutes.concat(':')
+        time = Minutes.concat(seconds)
+        console.log(time);
+        clearInterval(timer)
+        sendScore()
+        getScore()
     }
    
 }
@@ -245,14 +263,19 @@ function correct006() {
     score001.innerHTML = a++;
     
     if(a>6){
-        clearInterval(start)
         score ++
-        scorediv.innerHTML=score
         scoreboard.finalscore=score
         finalmodal.style.display='block'
         playername.innerHTML=scoreboard.name
-            playerscore.innerHTML=scoreboard.finalscore
+        playerscore.innerHTML=scoreboard.finalscore
         scoreboard.finalscore=score
+        Minutes = minutes.concat(':')
+        time = Minutes.concat(seconds)
+        console.log(time);
+        clearInterval(timer)
+        sendScore()
+        getScore()
+        
     }
    
 }
@@ -278,47 +301,18 @@ function hint() {
     }
 }
 
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-     function time () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-        display.textContent = minutes + ":" + seconds;
-        
-        if (--timer < 0) {
-            timer = duration;
-            
-        }
-        
-        if(seconds == 00 && count <10){
-            count++
-            nextLevel(count)
-        
-        }else if (seconds == 00 && count == 10){
-            
-            clearInterval(start)
-        }
-    }
-    
-   start= setInterval(time, 1000);
-    
-}
 var modal = document.getElementById("myModal");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 var close = document.getElementsByClassName("closefinal")[0];
 close.onclick=function(){
     finalmodal.style.display="none"
-    clearInterval(start)
+    
 }
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
-  Minutes = 30 * 1,
-           display = document.querySelector('#time');
-           startTimer(Minutes, display)
+
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -326,17 +320,83 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
     finalmodal.style.display="none"
-    Minutes = 30 * 1,
-           display = document.querySelector('#time');
-           startTimer(Minutes, display)
+    timer=setInterval( function(){
+        seconds=pad(++sec%60);
+        minutes=pad(parseInt(sec/60,10))
+        document.getElementById("seconds").innerHTML=seconds;
+        document.getElementById("minutes").innerHTML= minutes;
+    }, 1000);
   }}
   function getname(){
     var x = document.getElementById("name").value;
-            scoreboard.name=x
+            playerName=x
            player.innerHTML = x;
            modal.style.display = "none";
-           Minutes = 30 * 1,
-           display = document.querySelector('#time');
-           startTimer(Minutes, display)
+           timer=setInterval( function(){
+            seconds=pad(++sec%60);
+            minutes=pad(parseInt(sec/60,10))
+            document.getElementById("seconds").innerHTML=seconds;
+            document.getElementById("minutes").innerHTML= minutes;
+        }, 1000);
+      
+    }
+
+
+function sendScore(){
+    fetch('https://janssen-oncology.cat-sw.com/api/score/save', {
+        method: 'POST',
+        body:JSON.stringify({
+            name: playerName,
+            time: time
+            
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+        }
+    }).then(function (response) {
+        if (response.ok) {
+            return response.json();
+        }
+        return Promise.reject(response);
+    }).then(function (data) {
+        console.log(data);
+    }).catch(function (error) {
+        console.warn('Something went wrong.', error);
+    });
+    
 }
-localStorage.setItem("PlayerNames",scoreboard.name );
+function getScore(){
+    fetch('https://janssen-oncology.cat-sw.com/api/scores', {
+        method: 'GET'
+    }).then(function (response) {
+        if (response.ok) {
+            return response.json();
+        }
+        return Promise.reject(response);
+    }).then(data => {
+        
+        data.data.forEach(element => {
+        final.innerHTML=`<table style="width:100%">
+        <tr>
+          <th></th>
+          <th>Name</th> 
+          <th>Time</th>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td>${element.name}</td>
+          
+        </tr>
+        <tr>
+        <td>${element.time}</td>
+        
+        </tr>
+      </table>`})
+        console.log(data.data);
+        finalmodal.style.display="block"
+    }).catch(function (error) {
+        console.warn('Something went wrong.', error);
+    });
+}

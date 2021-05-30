@@ -24,9 +24,11 @@
         Name:<text id="player">Guest</text>
         Level:<text id="level">1</text>
          Items: <text id="score001">0</text><text id="score002">/3</text>
-    
-    Time: <span id="time">00:00</span> 
-    Score: <text id="scorediv">0</text>
+            <span class="text">
+                <i id="clock" class='far fa-clock'></i>
+                <label class="clck" id="minutes" >00</label>:<label class="clck" id="seconds" >00</label>
+              </span>
+      
     <button id="hintbtn" onclick="hint()"> Hint </button>
 </p>
    
@@ -68,10 +70,13 @@
     </div>
     <div id="finalmodal" class="modal">
         <div class="modal-content">
+            <div id="final">
+
+
+            </div>
             <span class="closefinal">&times;</span>
             <p id="wintitle" class=" title"> Congratulations. You won.</p>
-            <p   class=" wintxt"> Name:<text id="playername" ></text></p>
-            <p  class="wintxt"> Score: <text id="playerscore"></text></p>
+            
             <button id="winbtn" onClick="window.location.href=window.location.href">Play Again</button>
         </div>
     </div>
