@@ -8,7 +8,7 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <title>Find The Differences</title>
         <link rel="stylesheet" href="style.css">
-        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
         <audio id="buzzer" src="mixkit-achievement-bell-600.wav" type="audio/wav"></audio>
   
@@ -32,7 +32,8 @@
     <button id="hintbtn" onclick="hint()"> Hint </button>
 </p>
    
-    
+    <div class="columns">
+        <div class="column is-12">
     <div class="position001">
         <div id="board001">
             <button class="hide001" onclick="incorrect001()">
@@ -56,6 +57,8 @@
             </div>
         </div>
     </div>
+    </div>
+</div>
     <br />
     <p id="message001"></p>
     <div id="message002"></div>
