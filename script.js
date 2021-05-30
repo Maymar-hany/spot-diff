@@ -20,6 +20,7 @@ var timer= 0;
             var minutes =0;
             var seconds = 0;
 var start=0
+var won = document.getElementById('level-up')
 var audio = document.getElementById('buzzer')
 function pad ( val ) { return val > 9 ? val : "0" + val; }
 
@@ -92,6 +93,7 @@ function correct001() {
     audio.play();
     if(count >=4 && count <10){
         if (a > 4) {
+            won.play()
             count++
             score ++
             message001.innerHTML = "Congratulations. You found all of them.";
@@ -100,7 +102,7 @@ function correct001() {
         }
     }else if(count ===10) {
         if (a > 6) {
-            
+            won.play()
             score ++
             scoreboard.finalscore=score
             finalmodal.style.display='block'
@@ -116,6 +118,7 @@ function correct001() {
     }
     else{
         if (a > 3) {
+            won.play()
             count++
             score ++
             message001.innerHTML = "Congratulations. You found all of them.";
@@ -134,6 +137,7 @@ function correct002() {
     audio.play();
     if(count >=4 && count <10){
         if (a > 4) {
+            won.play()
             count++
             score ++
             message001.innerHTML = "Congratulations. You found all of them.";
@@ -142,7 +146,7 @@ function correct002() {
         }
     }else if(count ===10) {
         if (a > 6) {
-            
+            won.play() 
             score ++
             scoreboard.finalscore=score
             finalmodal.style.display='block'
@@ -156,6 +160,7 @@ function correct002() {
     }
     else{
         if (a > 3) {
+            won.play()
             count++
             score ++
             message001.innerHTML = "Congratulations. You found all of them.";
@@ -173,6 +178,7 @@ function correct003() {
     score001.innerHTML = a++;
     if(count >=4 && count <10){
         if (a > 4) {
+            won.play()
             count++
             score ++
             message001.innerHTML = "Congratulations. You found all of them.";
@@ -181,7 +187,7 @@ function correct003() {
         }
     }else if(count ===10) {
         if (a > 6) {
-            
+            won.play()
             score ++
             scoreboard.finalscore=score
             finalmodal.style.display='block'   
@@ -196,6 +202,7 @@ function correct003() {
     }
     else{
         if (a > 3) {
+            won.play()
             count++
             score ++
             message001.innerHTML = "Congratulations. You found all of them.";
@@ -212,13 +219,14 @@ function correct004() {
     score001.innerHTML = a++;
     
     if (a > 4 && count !=10) {
+        won.play()
         count++
         score ++
         message001.innerHTML = "Congratulations. You found all of them.";
         message002.innerHTML = "<button class=blue001 onclick=nextLevel(count)>Next Level</button>";
         
     }else if(a>6){
-        
+        won.play()
         score ++
         scoreboard.finalscore=score
         finalmodal.style.display='block'
@@ -239,7 +247,7 @@ function correct005() {
     
    
      if(a>6){
-         
+        won.play()
         score ++
         scoreboard.finalscore=score
         finalmodal.style.display='block'
@@ -259,6 +267,7 @@ function correct006() {
     score001.innerHTML = a++;
     
     if(a>6){
+        won.play()
         score ++
         scoreboard.finalscore=score
         finalmodal.style.display='block'
