@@ -291,8 +291,8 @@ function hint() {
 var modal = document.getElementById("myModal");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-var close = document.getElementsByClassName("closefinal")[0];
-close.onclick=function(){
+var closefinal = document.getElementsByClassName("closefinal")[0];
+closefinal.onclick=function(){
     finalmodal.style.display="none"
     
 }
