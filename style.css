@@ -79,10 +79,7 @@ html {
     position: relative;
    max-height: 80%;
 }
-#board001{
-    margin: 0px auto;
-    width: fit-content;
-}
+
 .block001 {
     position: absolute;
     top: 100px;
