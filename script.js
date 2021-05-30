@@ -20,6 +20,7 @@ var timer= 0;
             var minutes =0;
             var seconds = 0;
 var start=0
+var audio = document.getElementById('buzzer')
 function pad ( val ) { return val > 9 ? val : "0" + val; }
 
 
@@ -88,7 +89,7 @@ function correct001() {
    d=document.getElementById('disappear0'+count+'1')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
-    
+    audio.play();
     if(count >=4 && count <10){
         if (a > 4) {
             count++
@@ -125,11 +126,12 @@ function correct001() {
 }
 
 function correct002() {
+    
     correct.push(2)
     d=document.getElementById('disappear0'+count+'2')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
-    
+    audio.play();
     if(count >=4 && count <10){
         if (a > 4) {
             count++
@@ -164,6 +166,7 @@ function correct002() {
 }
 
 function correct003() {
+    audio.play();
     correct.push(3)
     d=document.getElementById('disappear0'+count+'3')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
@@ -203,6 +206,7 @@ function correct003() {
    
 }
 function correct004() {
+    audio.play();
     d=document.getElementById('disappear0'+count+'4')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
@@ -228,6 +232,7 @@ function correct004() {
    
 }
 function correct005() {
+    audio.play();
     d=document.getElementById('disappear0'+count+'5')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
@@ -248,6 +253,7 @@ function correct005() {
    
 }
 function correct006() {
+    audio.play();
     d=document.getElementById('disappear0'+count+'6')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
