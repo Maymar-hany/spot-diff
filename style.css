@@ -121,20 +121,20 @@ html {
 }
 .block021 {
     position: absolute;
-    top: 175px;
-    left: 570px;
+    top: 165px;
+    left: 260px;
 }
 
 .block022 {
     position: absolute;
-    top: 250px;
-    left: 470px;
+    top: 240px;
+    left: 60px;
 }
 
 .block023 {
     position: absolute;
     top: 120px;
-    left: 620px;
+    left: 380px;
     
 }
 
@@ -148,8 +148,8 @@ html {
 .button022 {
     background-color: transparent;
     border: 1px solid transparent;
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
 }
 
 .button023 {
@@ -587,6 +587,7 @@ html {
 #mark001 {
     color: #f3a90b !important;
     font-size: 180%;
+    width: 50px;
 }
 strong{
     color: #f3a90b !important;  
