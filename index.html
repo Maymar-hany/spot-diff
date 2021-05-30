@@ -62,7 +62,7 @@
     <br />
     <p id="message001"></p>
     <div id="message002"></div>
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal is-active">
         <div class="modal-content">
             <span class="close">&times;</span>
 
@@ -74,11 +74,19 @@
     <div id="finalmodal" class="modal">
         <div class="modal-content">
             <div id="final">
-
-
+                <span class="closefinal">&times;</span>
+                <p id="wintitle" class=" title"> Congratulations. You won.</p>
+                <table id="wintitle" style="width:100%">
+                   
+                    <tr>
+                      <th></th>
+                      <th>Name</th> 
+                      <th>Time</th>
+                    </tr>
+                   
+                  </table>
             </div>
-            <span class="closefinal">&times;</span>
-            <p id="wintitle" class=" title"> Congratulations. You won.</p>
+           
             
             <button id="winbtn" onClick="window.location.href=window.location.href">Play Again</button>
         </div>

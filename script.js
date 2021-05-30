@@ -13,7 +13,7 @@ var scoreboard={
     name:'',
     finalscore:''
 }
-var playeName="";
+var playerName="";
 var time =0;
 var timer= 0;
             var sec = 0;
@@ -51,6 +51,7 @@ function nextLevel(){
   </div>` 
    if(count>3){
        correctAll=[1,2,3,4]
+       score002.innerHTML="/4"
        var block = document.createElement('div')
        block.innerHTML=`<div id="disappear0${count}4">
        <button class="button0${count}4" onclick="correct004()"></button>
@@ -87,7 +88,7 @@ function correct001() {
    d=document.getElementById('disappear0'+count+'1')
     d.innerHTML = "<div id=mark001><strong>&#9711</strong></div>";
     score001.innerHTML = a++;
-    getScore()
+    
     if(count >=4 && count <10){
         if (a > 4) {
             count++
@@ -101,15 +102,13 @@ function correct001() {
             
             score ++
             scoreboard.finalscore=score
-            playername.innerHTML=scoreboard.name
-            playerscore.innerHTML=scoreboard.finalscore
             finalmodal.style.display='block'
             Minutes = minutes.concat(':')
             time = Minutes.concat(seconds)
-            console.log(time);
+            
             clearInterval(timer)
             sendScore()
-            getScore()
+           
             
         }
        
@@ -144,15 +143,12 @@ function correct002() {
             
             score ++
             scoreboard.finalscore=score
-            playername.innerHTML=scoreboard.name
-            playerscore.innerHTML=scoreboard.finalscore
             finalmodal.style.display='block'
             Minutes = minutes.concat(':')
             time = Minutes.concat(seconds)
-            console.log(time);
             clearInterval(timer)
             sendScore()
-            getScore()
+            
         }
        
     }
@@ -185,15 +181,13 @@ function correct003() {
             
             score ++
             scoreboard.finalscore=score
-            playername.innerHTML=scoreboard.name
-            playerscore.innerHTML=scoreboard.finalscore
             finalmodal.style.display='block'   
             Minutes = minutes.concat(':')
             time = Minutes.concat(seconds)
             console.log(time);
             clearInterval(timer)
             sendScore()
-            getScore()
+         
         }
        
     }
@@ -223,15 +217,13 @@ function correct004() {
         
         score ++
         scoreboard.finalscore=score
-        playername.innerHTML=scoreboard.name
-        playerscore.innerHTML=scoreboard.finalscore
         finalmodal.style.display='block'
         Minutes = minutes.concat(':')
         time = Minutes.concat(seconds)
         console.log(time);
         clearInterval(timer)
         sendScore()
-        getScore()
+        
     }
    
 }
@@ -246,14 +238,12 @@ function correct005() {
         score ++
         scoreboard.finalscore=score
         finalmodal.style.display='block'
-        playername.innerHTML=scoreboard.name
-        playerscore.innerHTML=scoreboard.finalscore
         Minutes = minutes.concat(':')
         time = Minutes.concat(seconds)
         console.log(time);
         clearInterval(timer)
         sendScore()
-        getScore()
+        
     }
    
 }
@@ -266,15 +256,12 @@ function correct006() {
         score ++
         scoreboard.finalscore=score
         finalmodal.style.display='block'
-        playername.innerHTML=scoreboard.name
-        playerscore.innerHTML=scoreboard.finalscore
         scoreboard.finalscore=score
         Minutes = minutes.concat(':')
         time = Minutes.concat(seconds)
-        console.log(time);
         clearInterval(timer)
         sendScore()
-        getScore()
+        
         
     }
    
@@ -312,6 +299,13 @@ close.onclick=function(){
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
+  playeName='Guest'
+  timer=setInterval( function(){
+    seconds=pad(++sec%60);
+    minutes=pad(parseInt(sec/60,10))
+    document.getElementById("seconds").innerHTML=seconds;
+    document.getElementById("minutes").innerHTML= minutes;
+}, 1000);
 
 }
 
@@ -319,6 +313,7 @@ span.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+    playerName='Guest'
     finalmodal.style.display="none"
     timer=setInterval( function(){
         seconds=pad(++sec%60);
@@ -355,11 +350,12 @@ function sendScore(){
         }
     }).then(function (response) {
         if (response.ok) {
+            
             return response.json();
         }
         return Promise.reject(response);
     }).then(function (data) {
-        console.log(data);
+        getScore()
     }).catch(function (error) {
         console.warn('Something went wrong.', error);
     });
@@ -374,29 +370,27 @@ function getScore(){
         }
         return Promise.reject(response);
     }).then(data => {
-        
         data.data.forEach(element => {
-        final.innerHTML=`<table style="width:100%">
-        <tr>
-          <th></th>
-          <th>Name</th> 
-          <th>Time</th>
-        </tr>
-        <tr>
-          <td></td>
-        </tr>
-        <tr>
-          <td>${element.name}</td>
-          
-        </tr>
-        <tr>
-        <td>${element.time}</td>
+            position++
+        final.innerHTML +=
+        `<table ">
+      
         
-        </tr>
-      </table>`})
-        console.log(data.data);
+        <tr>
+        
+        <td id="pos">${position}</td>
+        <td>${element.name}</td>
+        <td>${element.time}</td>
+      </tr>
+        
+      </table>`
+       })
+        if(position==1){
+            pos.innerHTML=`<img src="images/trophy.png">`
+        }
         finalmodal.style.display="block"
     }).catch(function (error) {
         console.warn('Something went wrong.', error);
     });
 }
+var position = 0

@@ -161,19 +161,19 @@ html {
 .block031 {
     position: absolute;
     top: 250px;
-    left: 590px;
+    left: 420px;
 }
 
 .block032 {
     position: absolute;
-    top: 220px;
-    left: 330px;
+    top: 210px;
+    left: 170px;
 }
 
 .block033 {
     position: absolute;
-    top: 115px;
-    left: 380px;
+    top: 105px;
+    left: 220px;
     
 }
 
@@ -200,25 +200,25 @@ html {
 .block041 {
     position: absolute;
     top: 100px;
-    left: 470px;
+    left: 310px;
 }
 
 .block042 {
     position: absolute;
-    top: 110px;
-    left: 250px;
+    top: 90px;
+    left: 100px;
 }
 
 .block043 {
     position: absolute;
-    top: 175px;
-    left: 200px;
+    top: 165px;
+    left: 50px;
     
 }
 .block044 {
     position: absolute;
-    top: 10px;
-    left: 320px;
+    top: 0px;
+    left: 160px;
     
 }
 
@@ -250,26 +250,26 @@ html {
 }
 .block051 {
     position: absolute;
-    top: 50px;
-    left: 400px;
+    top: 40px;
+    left: 240px;
 }
 
 .block052 {
     position: absolute;
     top: 100px;
-    left: 250px;
+    left: 100px;
 }
 
 .block053 {
     position: absolute;
     top: 155px;
-    left: 280px;
+    left: 130px;
     
 }
 .block054 {
     position: absolute;
-    top: 270px;
-    left: 270px;
+    top: 265px;
+    left: 100px;
     
 }
 
@@ -301,26 +301,26 @@ html {
 }
 .block061 {
     position: absolute;
-    top: 70px;
-    left: 470px;
+    top: 40px;
+    left: 400px;
 }
 
 .block062 {
     position: absolute;
-    top: 50px;
-    left: 630px;
+    top: 70px;
+    left: 50px;
 }
 
 .block063 {
     position: absolute;
-    top: 255px;
-    left: 610px;
+    top: 250px;
+    left: 360px;
     
 }
 .block064 {
     position: absolute;
-    top: 100px;
-    left: 530px;
+    top: 90px;
+    left: 190px;
     
 }
 
@@ -353,25 +353,25 @@ html {
 .block071 {
     position: absolute;
     top: 120px;
-    left: 365px;
+    left: 345px;
 }
 
 .block072 {
     position: absolute;
-    top: 130px;
-    left: 510px;
+    top: 110px;
+    left: 205px;
 }
 
 .block073 {
     position: absolute;
-    top: 265px;
-    left: 320px;
+    top: 255px;
+    left: 170px;
     
 }
 .block074 {
     position: absolute;
-    top: 130px;
-    left: 165px;
+    top: 120px;
+    left: 20px;
     
 }
 
@@ -403,26 +403,26 @@ html {
 }
 .block081 {
     position: absolute;
-    top: 190px;
-    left: 385px;
+    top: 170px;
+    left: 375px;
 }
 
 .block082 {
     position: absolute;
-    top: 230px;
-    left: 460px;
+    top: 220px;
+    left: 240px;
 }
 
 .block083 {
     position: absolute;
     top: 250px;
-    left: 580px;
+    left: 380px;
     
 }
 .block084 {
     position: absolute;
-    top: 165px;
-    left: 575px;
+    top: 175px;
+    left: 135px;
     
 }
 
@@ -454,26 +454,26 @@ html {
 }
 .block091 {
     position: absolute;
-    top: 140px;
-    left: 365px;
+    top: 130px;
+    left: 305px;
 }
 
 .block092 {
     position: absolute;
-    top: 150px;
-    left: 440px;
+    top: 140px;
+    left: 240px;
 }
 
 .block093 {
     position: absolute;
-    top: 50px;
-    left: 500px;
+    top: 40px;
+    left: 360px;
     
 }
 .block094 {
     position: absolute;
     top: 180px;
-    left: 175px;
+    left: 80px;
     
 }
 
@@ -505,38 +505,38 @@ html {
 }
 .block0101 {
     position: absolute;
-    top: 230px;
-    left: 285px;
+    top: 220px;
+    left: 20px;
 }
 
 .block0102 {
     position: absolute;
-    top: 150px;
-    left: 520px;
+    top: 145px;
+    left: 305px;
 }
 
 .block0103 {
     position: absolute;
-    top: 230px;
-    left: 590px;
+    top: 225px;
+    left: 400px;
     
 }
 .block0104 {
     position: absolute;
-    top: 250px;
-    left: 355px;
+    top: 240px;
+    left: 105px;
     
 }
 .block0105 {
     position: absolute;
-    top: 260px;
-    left: 395px;
+    top: 250px;
+    left: 140px;
     
 }
 .block0106 {
     position: absolute;
-    top: 200px;
-    left: 355px;
+    top: 195px;
+    left: 115px;
     
 }
 
@@ -627,7 +627,7 @@ strong{
     cursor: pointer;
     width: 100px;
 }
-.text{
+.text ,#message001{
     color: #1285ca;
     font-weight: bold;
     font-size: 20px;
@@ -643,20 +643,19 @@ strong{
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: hidden; /* Enable scroll if needed */
+    overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
   
   /* Modal Content/Box */
   .modal-content {
-      justify-content: center;
-    align-items: center;
+    padding: 30px;
     background-color: #5d0668;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border-radius: 10px;
-    width: fit-content; /* Could be more or less, depending on screen size */
+    border-radius: 20px;
+    width: fit-content !important;
+    height: fit-content;
+    color: #fff;
   }
 
 #wintitle{
@@ -664,6 +663,7 @@ strong{
     font-size: 20px;
     justify-content: center;
     align-items: center;
+    width: fit-content;
 }
 .wintxt{
     color: #fff;
@@ -693,6 +693,8 @@ strong{
     float: right;
     font-size: 28px;
     font-weight: bold;
+    
+    
   }
   
   .close:hover,
@@ -708,7 +710,6 @@ strong{
     justify-content: center;
     align-items: center; 
     margin: 0 auto;
-    
     width: fit-content;
     
 }
@@ -722,3 +723,7 @@ strong{
     margin-right: 20px;
     
 }
+table td, th{
+   color: #fff !important;  
+   width: 150px;
+  }
