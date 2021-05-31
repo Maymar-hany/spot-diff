@@ -7,6 +7,7 @@ b--;
 var hinted = 0;
 var score = 0;
 var Minutes=0;
+var position = 0
 var correct = [];
 var correctAll=[1,2,3]
 var scoreboard={
@@ -394,19 +395,25 @@ function getScore(){
         
         <tr>
         
-        <td id="pos">${position}</td>
+        <td id='pos${position}'>${position}</td>
         <td>${element.name}</td>
         <td>${element.time}</td>
       </tr>
         
       </table>`
+      if(position==1){
+        pos1.innerHTML= `<img src="images/gold-cup.png">`
+    }
+     if(position==2){
+        pos2.innerHTML=`<img src="images/silver-cup.png">`
+    }
+     if (position==3){
+        pos3.innerHTML=`<img src="images/third-cup.png">`
+    }
        })
-        if(position==1){
-            pos.innerHTML=`<img src="images/trophy.png">`
-        }
+       
         finalmodal.style.display="block"
     }).catch(function (error) {
         console.warn('Something went wrong.', error);
     });
 }
-var position = 0

@@ -82,20 +82,20 @@ html {
 
 .block001 {
     position: absolute;
-    top: 100px;
-    left: 290px;
+    top: 120px;
+    left: 210px;
 }
 
 .block002 {
     position: absolute;
-    top: 100px;
-    left: 50px;
+    top: 120px;
+    left: 150px;
 }
 
 .block003 {
     position: absolute;
-    top: 90px;
-    left: 340px;
+    top: 125px;
+    left: 90px;
     
 }
 
@@ -134,7 +134,7 @@ html {
 .block023 {
     position: absolute;
     top: 120px;
-    left: 380px;
+    left: 430px;
     
 }
 
@@ -156,24 +156,24 @@ html {
     background-color: transparent;
     border: 1px solid transparent;
     width: 60px;
-    height: 60px;
+    height: 100px;
 }
 .block031 {
     position: absolute;
-    top: 250px;
-    left: 420px;
+    top: 150px;
+    left: 330px;
 }
 
 .block032 {
     position: absolute;
-    top: 210px;
-    left: 170px;
+    top: 150px;
+    left: 40px;
 }
 
 .block033 {
     position: absolute;
     top: 105px;
-    left: 220px;
+    left: 310px;
     
 }
 
@@ -187,8 +187,8 @@ html {
 .button032 {
     background-color: transparent;
     border: 1px solid transparent;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 100px;
 }
 
 .button033 {
@@ -301,8 +301,8 @@ html {
 }
 .block061 {
     position: absolute;
-    top: 40px;
-    left: 400px;
+    top: 70px;
+    left: 410px;
 }
 
 .block062 {
@@ -313,8 +313,8 @@ html {
 
 .block063 {
     position: absolute;
-    top: 250px;
-    left: 360px;
+    top: 120px;
+    left: 350px;
     
 }
 .block064 {
@@ -327,8 +327,8 @@ html {
 .button061 {
     background-color: transparent;
     border: 1px solid transparent;
-    width: 40px;
-    height: 30px;
+    width: 50px;
+    height: 40px;
 }
 
 .button062 {
@@ -341,8 +341,8 @@ html {
 .button063 {
     background-color: transparent;
     border: 1px solid transparent;
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
 }
 .button064 {
     background-color: transparent;
@@ -403,8 +403,8 @@ html {
 }
 .block081 {
     position: absolute;
-    top: 170px;
-    left: 375px;
+    top: 20px;
+    left: 105px;
 }
 
 .block082 {
@@ -430,7 +430,7 @@ html {
     background-color: transparent;
     border: 1px solid transparent;
     width: 40px;
-    height: 30px;
+    height: 60px;
 }
 
 .button082 {
@@ -454,26 +454,26 @@ html {
 }
 .block091 {
     position: absolute;
-    top: 130px;
-    left: 305px;
+    top: 210px;
+    left: 285px;
 }
 
 .block092 {
     position: absolute;
-    top: 140px;
-    left: 240px;
+    top: 150px;
+    left: 440px;
 }
 
 .block093 {
     position: absolute;
-    top: 40px;
-    left: 360px;
+    top: 235px;
+    left: 35px;
     
 }
 .block094 {
     position: absolute;
     top: 180px;
-    left: 80px;
+    left: 44px;
     
 }
 
@@ -487,8 +487,8 @@ html {
 .button092 {
     background-color: transparent;
     border: 1px solid transparent;
-    width: 40px;
-    height: 60px;
+    width: 60px;
+    height: 100px;
 }
 
 .button093 {
